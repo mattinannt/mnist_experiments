@@ -1,0 +1,610 @@
+2017-03-02 18:23:45,603 - DEBUG - STARTING MULTI-LAYER MNIST
+2017-03-02 18:24:37,435 - WARNING - From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/nn_ops.py:1391 in _flatten_outer_dims.: concat (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2016-12-13.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.concat_v2().
+2017-03-02 18:24:37,445 - WARNING - From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/nn_ops.py:1391 in _flatten_outer_dims.: concat (from tensorflow.python.ops.array_ops) is deprecated and will be removed after 2016-12-13.
+Instructions for updating:
+This op will be removed after the deprecation date. Please switch to tf.concat_v2().
+2017-03-02 18:24:37,651 - DEBUG - starting computation (batch-size: 50, iterations=20000)
+2017-03-02 18:24:41,561 - DEBUG - step 0, training accuracy 0.1
+2017-03-02 18:24:41,561 - DEBUG - time elapsed: 3.91s
+2017-03-02 18:24:41,561 - DEBUG - mean seconds/batch: 3.910059s
+2017-03-02 18:24:49,123 - DEBUG - step 100, training accuracy 0.82
+2017-03-02 18:24:49,123 - DEBUG - time elapsed: 11.47s
+2017-03-02 18:24:49,123 - DEBUG - mean seconds/batch: 0.113587s
+2017-03-02 18:24:56,458 - DEBUG - step 200, training accuracy 0.96
+2017-03-02 18:24:56,458 - DEBUG - time elapsed: 18.81s
+2017-03-02 18:24:56,458 - DEBUG - mean seconds/batch: 0.093571s
+2017-03-02 18:25:03,799 - DEBUG - step 300, training accuracy 0.88
+2017-03-02 18:25:03,799 - DEBUG - time elapsed: 26.15s
+2017-03-02 18:25:03,799 - DEBUG - mean seconds/batch: 0.086872s
+2017-03-02 18:25:11,136 - DEBUG - step 400, training accuracy 0.98
+2017-03-02 18:25:11,136 - DEBUG - time elapsed: 33.49s
+2017-03-02 18:25:11,136 - DEBUG - mean seconds/batch: 0.083504s
+2017-03-02 18:25:18,473 - DEBUG - step 500, training accuracy 0.94
+2017-03-02 18:25:18,473 - DEBUG - time elapsed: 40.82s
+2017-03-02 18:25:18,473 - DEBUG - mean seconds/batch: 0.081481s
+2017-03-02 18:25:25,808 - DEBUG - step 600, training accuracy 1
+2017-03-02 18:25:25,809 - DEBUG - time elapsed: 48.16s
+2017-03-02 18:25:25,809 - DEBUG - mean seconds/batch: 0.080130s
+2017-03-02 18:25:33,142 - DEBUG - step 700, training accuracy 0.96
+2017-03-02 18:25:33,142 - DEBUG - time elapsed: 55.49s
+2017-03-02 18:25:33,142 - DEBUG - mean seconds/batch: 0.079160s
+2017-03-02 18:25:40,504 - DEBUG - step 800, training accuracy 0.9
+2017-03-02 18:25:40,504 - DEBUG - time elapsed: 62.85s
+2017-03-02 18:25:40,504 - DEBUG - mean seconds/batch: 0.078469s
+2017-03-02 18:25:47,865 - DEBUG - step 900, training accuracy 1
+2017-03-02 18:25:47,866 - DEBUG - time elapsed: 70.21s
+2017-03-02 18:25:47,866 - DEBUG - mean seconds/batch: 0.077930s
+2017-03-02 18:25:55,226 - DEBUG - step 1000, training accuracy 0.96
+2017-03-02 18:25:55,227 - DEBUG - time elapsed: 77.58s
+2017-03-02 18:25:55,227 - DEBUG - mean seconds/batch: 0.077498s
+2017-03-02 18:26:02,671 - DEBUG - step 1100, training accuracy 0.92
+2017-03-02 18:26:02,671 - DEBUG - time elapsed: 85.02s
+2017-03-02 18:26:02,671 - DEBUG - mean seconds/batch: 0.077221s
+2017-03-02 18:26:10,046 - DEBUG - step 1200, training accuracy 1
+2017-03-02 18:26:10,046 - DEBUG - time elapsed: 92.40s
+2017-03-02 18:26:10,046 - DEBUG - mean seconds/batch: 0.076932s
+2017-03-02 18:26:17,427 - DEBUG - step 1300, training accuracy 0.98
+2017-03-02 18:26:17,428 - DEBUG - time elapsed: 99.78s
+2017-03-02 18:26:17,428 - DEBUG - mean seconds/batch: 0.076692s
+2017-03-02 18:26:24,809 - DEBUG - step 1400, training accuracy 1
+2017-03-02 18:26:24,809 - DEBUG - time elapsed: 107.16s
+2017-03-02 18:26:24,809 - DEBUG - mean seconds/batch: 0.076487s
+2017-03-02 18:26:32,192 - DEBUG - step 1500, training accuracy 0.96
+2017-03-02 18:26:32,192 - DEBUG - time elapsed: 114.54s
+2017-03-02 18:26:32,192 - DEBUG - mean seconds/batch: 0.076310s
+2017-03-02 18:26:39,599 - DEBUG - step 1600, training accuracy 0.96
+2017-03-02 18:26:39,600 - DEBUG - time elapsed: 121.95s
+2017-03-02 18:26:39,600 - DEBUG - mean seconds/batch: 0.076171s
+2017-03-02 18:26:47,002 - DEBUG - step 1700, training accuracy 1
+2017-03-02 18:26:47,002 - DEBUG - time elapsed: 129.35s
+2017-03-02 18:26:47,002 - DEBUG - mean seconds/batch: 0.076044s
+2017-03-02 18:26:54,399 - DEBUG - step 1800, training accuracy 0.98
+2017-03-02 18:26:54,399 - DEBUG - time elapsed: 136.75s
+2017-03-02 18:26:54,399 - DEBUG - mean seconds/batch: 0.075929s
+2017-03-02 18:27:01,786 - DEBUG - step 1900, training accuracy 0.94
+2017-03-02 18:27:01,786 - DEBUG - time elapsed: 144.14s
+2017-03-02 18:27:01,786 - DEBUG - mean seconds/batch: 0.075821s
+2017-03-02 18:27:09,188 - DEBUG - step 2000, training accuracy 0.98
+2017-03-02 18:27:09,188 - DEBUG - time elapsed: 151.54s
+2017-03-02 18:27:09,188 - DEBUG - mean seconds/batch: 0.075731s
+2017-03-02 18:27:16,583 - DEBUG - step 2100, training accuracy 1
+2017-03-02 18:27:16,583 - DEBUG - time elapsed: 158.93s
+2017-03-02 18:27:16,583 - DEBUG - mean seconds/batch: 0.075646s
+2017-03-02 18:27:24,038 - DEBUG - step 2200, training accuracy 0.98
+2017-03-02 18:27:24,038 - DEBUG - time elapsed: 166.39s
+2017-03-02 18:27:24,039 - DEBUG - mean seconds/batch: 0.075596s
+2017-03-02 18:27:31,433 - DEBUG - step 2300, training accuracy 1
+2017-03-02 18:27:31,433 - DEBUG - time elapsed: 173.78s
+2017-03-02 18:27:31,433 - DEBUG - mean seconds/batch: 0.075525s
+2017-03-02 18:27:38,833 - DEBUG - step 2400, training accuracy 0.98
+2017-03-02 18:27:38,833 - DEBUG - time elapsed: 181.18s
+2017-03-02 18:27:38,833 - DEBUG - mean seconds/batch: 0.075461s
+2017-03-02 18:27:46,221 - DEBUG - step 2500, training accuracy 1
+2017-03-02 18:27:46,221 - DEBUG - time elapsed: 188.57s
+2017-03-02 18:27:46,222 - DEBUG - mean seconds/batch: 0.075398s
+2017-03-02 18:27:53,619 - DEBUG - step 2600, training accuracy 1
+2017-03-02 18:27:53,619 - DEBUG - time elapsed: 195.97s
+2017-03-02 18:27:53,619 - DEBUG - mean seconds/batch: 0.075343s
+2017-03-02 18:28:01,015 - DEBUG - step 2700, training accuracy 0.98
+2017-03-02 18:28:01,015 - DEBUG - time elapsed: 203.36s
+2017-03-02 18:28:01,016 - DEBUG - mean seconds/batch: 0.075292s
+2017-03-02 18:28:08,411 - DEBUG - step 2800, training accuracy 1
+2017-03-02 18:28:08,411 - DEBUG - time elapsed: 210.76s
+2017-03-02 18:28:08,411 - DEBUG - mean seconds/batch: 0.075245s
+2017-03-02 18:28:15,804 - DEBUG - step 2900, training accuracy 0.98
+2017-03-02 18:28:15,805 - DEBUG - time elapsed: 218.15s
+2017-03-02 18:28:15,805 - DEBUG - mean seconds/batch: 0.075200s
+2017-03-02 18:28:23,195 - DEBUG - step 3000, training accuracy 1
+2017-03-02 18:28:23,195 - DEBUG - time elapsed: 225.54s
+2017-03-02 18:28:23,195 - DEBUG - mean seconds/batch: 0.075156s
+2017-03-02 18:28:30,579 - DEBUG - step 3100, training accuracy 1
+2017-03-02 18:28:30,579 - DEBUG - time elapsed: 232.93s
+2017-03-02 18:28:30,579 - DEBUG - mean seconds/batch: 0.075114s
+2017-03-02 18:28:37,962 - DEBUG - step 3200, training accuracy 0.96
+2017-03-02 18:28:37,962 - DEBUG - time elapsed: 240.31s
+2017-03-02 18:28:37,962 - DEBUG - mean seconds/batch: 0.075074s
+2017-03-02 18:28:45,401 - DEBUG - step 3300, training accuracy 0.98
+2017-03-02 18:28:45,401 - DEBUG - time elapsed: 247.75s
+2017-03-02 18:28:45,401 - DEBUG - mean seconds/batch: 0.075053s
+2017-03-02 18:28:52,790 - DEBUG - step 3400, training accuracy 1
+2017-03-02 18:28:52,790 - DEBUG - time elapsed: 255.14s
+2017-03-02 18:28:52,790 - DEBUG - mean seconds/batch: 0.075019s
+2017-03-02 18:29:00,178 - DEBUG - step 3500, training accuracy 1
+2017-03-02 18:29:00,179 - DEBUG - time elapsed: 262.53s
+2017-03-02 18:29:00,179 - DEBUG - mean seconds/batch: 0.074987s
+2017-03-02 18:29:07,569 - DEBUG - step 3600, training accuracy 1
+2017-03-02 18:29:07,569 - DEBUG - time elapsed: 269.92s
+2017-03-02 18:29:07,569 - DEBUG - mean seconds/batch: 0.074957s
+2017-03-02 18:29:14,972 - DEBUG - step 3700, training accuracy 1
+2017-03-02 18:29:14,972 - DEBUG - time elapsed: 277.32s
+2017-03-02 18:29:14,972 - DEBUG - mean seconds/batch: 0.074931s
+2017-03-02 18:29:22,376 - DEBUG - step 3800, training accuracy 0.98
+2017-03-02 18:29:22,376 - DEBUG - time elapsed: 284.73s
+2017-03-02 18:29:22,376 - DEBUG - mean seconds/batch: 0.074908s
+2017-03-02 18:29:29,765 - DEBUG - step 3900, training accuracy 0.98
+2017-03-02 18:29:29,765 - DEBUG - time elapsed: 292.11s
+2017-03-02 18:29:29,765 - DEBUG - mean seconds/batch: 0.074882s
+2017-03-02 18:29:37,144 - DEBUG - step 4000, training accuracy 0.98
+2017-03-02 18:29:37,145 - DEBUG - time elapsed: 299.49s
+2017-03-02 18:29:37,145 - DEBUG - mean seconds/batch: 0.074855s
+2017-03-02 18:29:44,523 - DEBUG - step 4100, training accuracy 0.98
+2017-03-02 18:29:44,523 - DEBUG - time elapsed: 306.87s
+2017-03-02 18:29:44,524 - DEBUG - mean seconds/batch: 0.074829s
+2017-03-02 18:29:51,907 - DEBUG - step 4200, training accuracy 0.98
+2017-03-02 18:29:51,907 - DEBUG - time elapsed: 314.26s
+2017-03-02 18:29:51,908 - DEBUG - mean seconds/batch: 0.074805s
+2017-03-02 18:29:59,290 - DEBUG - step 4300, training accuracy 1
+2017-03-02 18:29:59,290 - DEBUG - time elapsed: 321.64s
+2017-03-02 18:29:59,291 - DEBUG - mean seconds/batch: 0.074783s
+2017-03-02 18:30:06,732 - DEBUG - step 4400, training accuracy 0.94
+2017-03-02 18:30:06,732 - DEBUG - time elapsed: 329.08s
+2017-03-02 18:30:06,732 - DEBUG - mean seconds/batch: 0.074774s
+2017-03-02 18:30:14,105 - DEBUG - step 4500, training accuracy 0.98
+2017-03-02 18:30:14,105 - DEBUG - time elapsed: 336.45s
+2017-03-02 18:30:14,105 - DEBUG - mean seconds/batch: 0.074751s
+2017-03-02 18:30:21,471 - DEBUG - step 4600, training accuracy 0.98
+2017-03-02 18:30:21,471 - DEBUG - time elapsed: 343.82s
+2017-03-02 18:30:21,471 - DEBUG - mean seconds/batch: 0.074727s
+2017-03-02 18:30:28,845 - DEBUG - step 4700, training accuracy 0.98
+2017-03-02 18:30:28,845 - DEBUG - time elapsed: 351.19s
+2017-03-02 18:30:28,845 - DEBUG - mean seconds/batch: 0.074706s
+2017-03-02 18:30:36,223 - DEBUG - step 4800, training accuracy 0.98
+2017-03-02 18:30:36,223 - DEBUG - time elapsed: 358.57s
+2017-03-02 18:30:36,223 - DEBUG - mean seconds/batch: 0.074687s
+2017-03-02 18:30:43,595 - DEBUG - step 4900, training accuracy 1
+2017-03-02 18:30:43,595 - DEBUG - time elapsed: 365.94s
+2017-03-02 18:30:43,595 - DEBUG - mean seconds/batch: 0.074667s
+2017-03-02 18:30:50,965 - DEBUG - step 5000, training accuracy 1
+2017-03-02 18:30:50,965 - DEBUG - time elapsed: 373.31s
+2017-03-02 18:30:50,965 - DEBUG - mean seconds/batch: 0.074648s
+2017-03-02 18:30:58,326 - DEBUG - step 5100, training accuracy 0.98
+2017-03-02 18:30:58,326 - DEBUG - time elapsed: 380.68s
+2017-03-02 18:30:58,326 - DEBUG - mean seconds/batch: 0.074628s
+2017-03-02 18:31:05,689 - DEBUG - step 5200, training accuracy 0.98
+2017-03-02 18:31:05,689 - DEBUG - time elapsed: 388.04s
+2017-03-02 18:31:05,689 - DEBUG - mean seconds/batch: 0.074608s
+2017-03-02 18:31:13,044 - DEBUG - step 5300, training accuracy 1
+2017-03-02 18:31:13,044 - DEBUG - time elapsed: 395.39s
+2017-03-02 18:31:13,044 - DEBUG - mean seconds/batch: 0.074588s
+2017-03-02 18:31:20,409 - DEBUG - step 5400, training accuracy 0.98
+2017-03-02 18:31:20,409 - DEBUG - time elapsed: 402.76s
+2017-03-02 18:31:20,409 - DEBUG - mean seconds/batch: 0.074571s
+2017-03-02 18:31:27,834 - DEBUG - step 5500, training accuracy 1
+2017-03-02 18:31:27,834 - DEBUG - time elapsed: 410.18s
+2017-03-02 18:31:27,834 - DEBUG - mean seconds/batch: 0.074565s
+2017-03-02 18:31:35,194 - DEBUG - step 5600, training accuracy 1
+2017-03-02 18:31:35,194 - DEBUG - time elapsed: 417.54s
+2017-03-02 18:31:35,194 - DEBUG - mean seconds/batch: 0.074548s
+2017-03-02 18:31:42,548 - DEBUG - step 5700, training accuracy 1
+2017-03-02 18:31:42,548 - DEBUG - time elapsed: 424.90s
+2017-03-02 18:31:42,548 - DEBUG - mean seconds/batch: 0.074530s
+2017-03-02 18:31:49,912 - DEBUG - step 5800, training accuracy 0.98
+2017-03-02 18:31:49,913 - DEBUG - time elapsed: 432.26s
+2017-03-02 18:31:49,913 - DEBUG - mean seconds/batch: 0.074515s
+2017-03-02 18:31:57,282 - DEBUG - step 5900, training accuracy 1
+2017-03-02 18:31:57,282 - DEBUG - time elapsed: 439.63s
+2017-03-02 18:31:57,282 - DEBUG - mean seconds/batch: 0.074501s
+2017-03-02 18:32:04,660 - DEBUG - step 6000, training accuracy 0.98
+2017-03-02 18:32:04,661 - DEBUG - time elapsed: 447.01s
+2017-03-02 18:32:04,661 - DEBUG - mean seconds/batch: 0.074489s
+2017-03-02 18:32:12,071 - DEBUG - step 6100, training accuracy 0.98
+2017-03-02 18:32:12,071 - DEBUG - time elapsed: 454.42s
+2017-03-02 18:32:12,071 - DEBUG - mean seconds/batch: 0.074483s
+2017-03-02 18:32:19,465 - DEBUG - step 6200, training accuracy 0.98
+2017-03-02 18:32:19,466 - DEBUG - time elapsed: 461.81s
+2017-03-02 18:32:19,466 - DEBUG - mean seconds/batch: 0.074474s
+2017-03-02 18:32:26,862 - DEBUG - step 6300, training accuracy 1
+2017-03-02 18:32:26,862 - DEBUG - time elapsed: 469.21s
+2017-03-02 18:32:26,862 - DEBUG - mean seconds/batch: 0.074466s
+2017-03-02 18:32:34,268 - DEBUG - step 6400, training accuracy 0.96
+2017-03-02 18:32:34,268 - DEBUG - time elapsed: 476.62s
+2017-03-02 18:32:34,268 - DEBUG - mean seconds/batch: 0.074460s
+2017-03-02 18:32:41,644 - DEBUG - step 6500, training accuracy 1
+2017-03-02 18:32:41,644 - DEBUG - time elapsed: 483.99s
+2017-03-02 18:32:41,644 - DEBUG - mean seconds/batch: 0.074449s
+2017-03-02 18:32:49,086 - DEBUG - step 6600, training accuracy 1
+2017-03-02 18:32:49,086 - DEBUG - time elapsed: 491.44s
+2017-03-02 18:32:49,087 - DEBUG - mean seconds/batch: 0.074449s
+2017-03-02 18:32:56,461 - DEBUG - step 6700, training accuracy 1
+2017-03-02 18:32:56,461 - DEBUG - time elapsed: 498.81s
+2017-03-02 18:32:56,461 - DEBUG - mean seconds/batch: 0.074438s
+2017-03-02 18:33:03,842 - DEBUG - step 6800, training accuracy 0.98
+2017-03-02 18:33:03,842 - DEBUG - time elapsed: 506.19s
+2017-03-02 18:33:03,842 - DEBUG - mean seconds/batch: 0.074429s
+2017-03-02 18:33:11,218 - DEBUG - step 6900, training accuracy 1
+2017-03-02 18:33:11,218 - DEBUG - time elapsed: 513.57s
+2017-03-02 18:33:11,218 - DEBUG - mean seconds/batch: 0.074419s
+2017-03-02 18:33:18,583 - DEBUG - step 7000, training accuracy 0.98
+2017-03-02 18:33:18,583 - DEBUG - time elapsed: 520.93s
+2017-03-02 18:33:18,583 - DEBUG - mean seconds/batch: 0.074408s
+2017-03-02 18:33:25,964 - DEBUG - step 7100, training accuracy 0.98
+2017-03-02 18:33:25,964 - DEBUG - time elapsed: 528.31s
+2017-03-02 18:33:25,964 - DEBUG - mean seconds/batch: 0.074400s
+2017-03-02 18:33:33,335 - DEBUG - step 7200, training accuracy 1
+2017-03-02 18:33:33,335 - DEBUG - time elapsed: 535.68s
+2017-03-02 18:33:33,335 - DEBUG - mean seconds/batch: 0.074390s
+2017-03-02 18:33:40,711 - DEBUG - step 7300, training accuracy 1
+2017-03-02 18:33:40,711 - DEBUG - time elapsed: 543.06s
+2017-03-02 18:33:40,711 - DEBUG - mean seconds/batch: 0.074382s
+2017-03-02 18:33:48,093 - DEBUG - step 7400, training accuracy 1
+2017-03-02 18:33:48,093 - DEBUG - time elapsed: 550.44s
+2017-03-02 18:33:48,093 - DEBUG - mean seconds/batch: 0.074374s
+2017-03-02 18:33:55,462 - DEBUG - step 7500, training accuracy 1
+2017-03-02 18:33:55,463 - DEBUG - time elapsed: 557.81s
+2017-03-02 18:33:55,463 - DEBUG - mean seconds/batch: 0.074365s
+2017-03-02 18:34:02,851 - DEBUG - step 7600, training accuracy 1
+2017-03-02 18:34:02,851 - DEBUG - time elapsed: 565.20s
+2017-03-02 18:34:02,851 - DEBUG - mean seconds/batch: 0.074359s
+2017-03-02 18:34:10,291 - DEBUG - step 7700, training accuracy 1
+2017-03-02 18:34:10,291 - DEBUG - time elapsed: 572.64s
+2017-03-02 18:34:10,291 - DEBUG - mean seconds/batch: 0.074359s
+2017-03-02 18:34:17,666 - DEBUG - step 7800, training accuracy 1
+2017-03-02 18:34:17,666 - DEBUG - time elapsed: 580.02s
+2017-03-02 18:34:17,666 - DEBUG - mean seconds/batch: 0.074351s
+2017-03-02 18:34:25,044 - DEBUG - step 7900, training accuracy 1
+2017-03-02 18:34:25,044 - DEBUG - time elapsed: 587.39s
+2017-03-02 18:34:25,044 - DEBUG - mean seconds/batch: 0.074344s
+2017-03-02 18:34:32,420 - DEBUG - step 8000, training accuracy 0.98
+2017-03-02 18:34:32,420 - DEBUG - time elapsed: 594.77s
+2017-03-02 18:34:32,420 - DEBUG - mean seconds/batch: 0.074337s
+2017-03-02 18:34:39,799 - DEBUG - step 8100, training accuracy 1
+2017-03-02 18:34:39,799 - DEBUG - time elapsed: 602.15s
+2017-03-02 18:34:39,799 - DEBUG - mean seconds/batch: 0.074330s
+2017-03-02 18:34:47,178 - DEBUG - step 8200, training accuracy 1
+2017-03-02 18:34:47,178 - DEBUG - time elapsed: 609.53s
+2017-03-02 18:34:47,178 - DEBUG - mean seconds/batch: 0.074324s
+2017-03-02 18:34:54,568 - DEBUG - step 8300, training accuracy 0.98
+2017-03-02 18:34:54,568 - DEBUG - time elapsed: 616.92s
+2017-03-02 18:34:54,568 - DEBUG - mean seconds/batch: 0.074318s
+2017-03-02 18:35:01,950 - DEBUG - step 8400, training accuracy 0.98
+2017-03-02 18:35:01,951 - DEBUG - time elapsed: 624.30s
+2017-03-02 18:35:01,951 - DEBUG - mean seconds/batch: 0.074313s
+2017-03-02 18:35:09,324 - DEBUG - step 8500, training accuracy 1
+2017-03-02 18:35:09,324 - DEBUG - time elapsed: 631.67s
+2017-03-02 18:35:09,324 - DEBUG - mean seconds/batch: 0.074306s
+2017-03-02 18:35:16,702 - DEBUG - step 8600, training accuracy 1
+2017-03-02 18:35:16,702 - DEBUG - time elapsed: 639.05s
+2017-03-02 18:35:16,702 - DEBUG - mean seconds/batch: 0.074300s
+2017-03-02 18:35:24,066 - DEBUG - step 8700, training accuracy 1
+2017-03-02 18:35:24,066 - DEBUG - time elapsed: 646.42s
+2017-03-02 18:35:24,066 - DEBUG - mean seconds/batch: 0.074292s
+2017-03-02 18:35:31,490 - DEBUG - step 8800, training accuracy 0.98
+2017-03-02 18:35:31,490 - DEBUG - time elapsed: 653.84s
+2017-03-02 18:35:31,490 - DEBUG - mean seconds/batch: 0.074292s
+2017-03-02 18:35:38,857 - DEBUG - step 8900, training accuracy 0.98
+2017-03-02 18:35:38,857 - DEBUG - time elapsed: 661.21s
+2017-03-02 18:35:38,857 - DEBUG - mean seconds/batch: 0.074285s
+2017-03-02 18:35:46,231 - DEBUG - step 9000, training accuracy 1
+2017-03-02 18:35:46,231 - DEBUG - time elapsed: 668.58s
+2017-03-02 18:35:46,231 - DEBUG - mean seconds/batch: 0.074278s
+2017-03-02 18:35:53,593 - DEBUG - step 9100, training accuracy 0.98
+2017-03-02 18:35:53,593 - DEBUG - time elapsed: 675.94s
+2017-03-02 18:35:53,594 - DEBUG - mean seconds/batch: 0.074271s
+2017-03-02 18:36:00,953 - DEBUG - step 9200, training accuracy 1
+2017-03-02 18:36:00,953 - DEBUG - time elapsed: 683.30s
+2017-03-02 18:36:00,953 - DEBUG - mean seconds/batch: 0.074264s
+2017-03-02 18:36:08,304 - DEBUG - step 9300, training accuracy 0.96
+2017-03-02 18:36:08,304 - DEBUG - time elapsed: 690.65s
+2017-03-02 18:36:08,304 - DEBUG - mean seconds/batch: 0.074256s
+2017-03-02 18:36:15,665 - DEBUG - step 9400, training accuracy 1
+2017-03-02 18:36:15,665 - DEBUG - time elapsed: 698.01s
+2017-03-02 18:36:15,665 - DEBUG - mean seconds/batch: 0.074249s
+2017-03-02 18:36:23,026 - DEBUG - step 9500, training accuracy 1
+2017-03-02 18:36:23,026 - DEBUG - time elapsed: 705.38s
+2017-03-02 18:36:23,026 - DEBUG - mean seconds/batch: 0.074242s
+2017-03-02 18:36:30,402 - DEBUG - step 9600, training accuracy 1
+2017-03-02 18:36:30,402 - DEBUG - time elapsed: 712.75s
+2017-03-02 18:36:30,402 - DEBUG - mean seconds/batch: 0.074237s
+2017-03-02 18:36:37,767 - DEBUG - step 9700, training accuracy 1
+2017-03-02 18:36:37,767 - DEBUG - time elapsed: 720.12s
+2017-03-02 18:36:37,767 - DEBUG - mean seconds/batch: 0.074231s
+2017-03-02 18:36:45,137 - DEBUG - step 9800, training accuracy 0.98
+2017-03-02 18:36:45,137 - DEBUG - time elapsed: 727.49s
+2017-03-02 18:36:45,137 - DEBUG - mean seconds/batch: 0.074226s
+2017-03-02 18:36:52,577 - DEBUG - step 9900, training accuracy 1
+2017-03-02 18:36:52,577 - DEBUG - time elapsed: 734.93s
+2017-03-02 18:36:52,577 - DEBUG - mean seconds/batch: 0.074228s
+2017-03-02 18:36:59,947 - DEBUG - step 10000, training accuracy 1
+2017-03-02 18:36:59,947 - DEBUG - time elapsed: 742.30s
+2017-03-02 18:36:59,947 - DEBUG - mean seconds/batch: 0.074222s
+2017-03-02 18:37:07,329 - DEBUG - step 10100, training accuracy 1
+2017-03-02 18:37:07,329 - DEBUG - time elapsed: 749.68s
+2017-03-02 18:37:07,329 - DEBUG - mean seconds/batch: 0.074218s
+2017-03-02 18:37:14,699 - DEBUG - step 10200, training accuracy 1
+2017-03-02 18:37:14,699 - DEBUG - time elapsed: 757.05s
+2017-03-02 18:37:14,699 - DEBUG - mean seconds/batch: 0.074213s
+2017-03-02 18:37:22,058 - DEBUG - step 10300, training accuracy 1
+2017-03-02 18:37:22,059 - DEBUG - time elapsed: 764.41s
+2017-03-02 18:37:22,059 - DEBUG - mean seconds/batch: 0.074207s
+2017-03-02 18:37:29,433 - DEBUG - step 10400, training accuracy 1
+2017-03-02 18:37:29,433 - DEBUG - time elapsed: 771.78s
+2017-03-02 18:37:29,433 - DEBUG - mean seconds/batch: 0.074203s
+2017-03-02 18:37:36,806 - DEBUG - step 10500, training accuracy 1
+2017-03-02 18:37:36,806 - DEBUG - time elapsed: 779.16s
+2017-03-02 18:37:36,807 - DEBUG - mean seconds/batch: 0.074198s
+2017-03-02 18:37:44,171 - DEBUG - step 10600, training accuracy 0.98
+2017-03-02 18:37:44,171 - DEBUG - time elapsed: 786.52s
+2017-03-02 18:37:44,171 - DEBUG - mean seconds/batch: 0.074193s
+2017-03-02 18:37:51,528 - DEBUG - step 10700, training accuracy 1
+2017-03-02 18:37:51,528 - DEBUG - time elapsed: 793.88s
+2017-03-02 18:37:51,528 - DEBUG - mean seconds/batch: 0.074187s
+2017-03-02 18:37:58,891 - DEBUG - step 10800, training accuracy 1
+2017-03-02 18:37:58,891 - DEBUG - time elapsed: 801.24s
+2017-03-02 18:37:58,891 - DEBUG - mean seconds/batch: 0.074182s
+2017-03-02 18:38:06,265 - DEBUG - step 10900, training accuracy 1
+2017-03-02 18:38:06,265 - DEBUG - time elapsed: 808.61s
+2017-03-02 18:38:06,265 - DEBUG - mean seconds/batch: 0.074178s
+2017-03-02 18:38:13,689 - DEBUG - step 11000, training accuracy 0.98
+2017-03-02 18:38:13,689 - DEBUG - time elapsed: 816.04s
+2017-03-02 18:38:13,689 - DEBUG - mean seconds/batch: 0.074179s
+2017-03-02 18:38:21,052 - DEBUG - step 11100, training accuracy 1
+2017-03-02 18:38:21,052 - DEBUG - time elapsed: 823.40s
+2017-03-02 18:38:21,052 - DEBUG - mean seconds/batch: 0.074174s
+2017-03-02 18:38:28,415 - DEBUG - step 11200, training accuracy 1
+2017-03-02 18:38:28,416 - DEBUG - time elapsed: 830.76s
+2017-03-02 18:38:28,416 - DEBUG - mean seconds/batch: 0.074169s
+2017-03-02 18:38:35,770 - DEBUG - step 11300, training accuracy 0.98
+2017-03-02 18:38:35,770 - DEBUG - time elapsed: 838.12s
+2017-03-02 18:38:35,770 - DEBUG - mean seconds/batch: 0.074163s
+2017-03-02 18:38:43,136 - DEBUG - step 11400, training accuracy 1
+2017-03-02 18:38:43,136 - DEBUG - time elapsed: 845.49s
+2017-03-02 18:38:43,136 - DEBUG - mean seconds/batch: 0.074159s
+2017-03-02 18:38:50,503 - DEBUG - step 11500, training accuracy 0.98
+2017-03-02 18:38:50,503 - DEBUG - time elapsed: 852.85s
+2017-03-02 18:38:50,503 - DEBUG - mean seconds/batch: 0.074155s
+2017-03-02 18:38:57,858 - DEBUG - step 11600, training accuracy 1
+2017-03-02 18:38:57,858 - DEBUG - time elapsed: 860.21s
+2017-03-02 18:38:57,858 - DEBUG - mean seconds/batch: 0.074149s
+2017-03-02 18:39:05,219 - DEBUG - step 11700, training accuracy 0.98
+2017-03-02 18:39:05,219 - DEBUG - time elapsed: 867.57s
+2017-03-02 18:39:05,219 - DEBUG - mean seconds/batch: 0.074145s
+2017-03-02 18:39:12,582 - DEBUG - step 11800, training accuracy 0.98
+2017-03-02 18:39:12,583 - DEBUG - time elapsed: 874.93s
+2017-03-02 18:39:12,583 - DEBUG - mean seconds/batch: 0.074140s
+2017-03-02 18:39:19,947 - DEBUG - step 11900, training accuracy 0.98
+2017-03-02 18:39:19,947 - DEBUG - time elapsed: 882.30s
+2017-03-02 18:39:19,947 - DEBUG - mean seconds/batch: 0.074136s
+2017-03-02 18:39:27,316 - DEBUG - step 12000, training accuracy 1
+2017-03-02 18:39:27,316 - DEBUG - time elapsed: 889.67s
+2017-03-02 18:39:27,316 - DEBUG - mean seconds/batch: 0.074133s
+2017-03-02 18:39:34,734 - DEBUG - step 12100, training accuracy 1
+2017-03-02 18:39:34,734 - DEBUG - time elapsed: 897.08s
+2017-03-02 18:39:34,734 - DEBUG - mean seconds/batch: 0.074133s
+2017-03-02 18:39:42,108 - DEBUG - step 12200, training accuracy 1
+2017-03-02 18:39:42,108 - DEBUG - time elapsed: 904.46s
+2017-03-02 18:39:42,108 - DEBUG - mean seconds/batch: 0.074130s
+2017-03-02 18:39:49,487 - DEBUG - step 12300, training accuracy 1
+2017-03-02 18:39:49,487 - DEBUG - time elapsed: 911.84s
+2017-03-02 18:39:49,488 - DEBUG - mean seconds/batch: 0.074127s
+2017-03-02 18:39:56,850 - DEBUG - step 12400, training accuracy 1
+2017-03-02 18:39:56,851 - DEBUG - time elapsed: 919.20s
+2017-03-02 18:39:56,851 - DEBUG - mean seconds/batch: 0.074123s
+2017-03-02 18:40:04,213 - DEBUG - step 12500, training accuracy 1
+2017-03-02 18:40:04,213 - DEBUG - time elapsed: 926.56s
+2017-03-02 18:40:04,213 - DEBUG - mean seconds/batch: 0.074119s
+2017-03-02 18:40:11,586 - DEBUG - step 12600, training accuracy 1
+2017-03-02 18:40:11,586 - DEBUG - time elapsed: 933.94s
+2017-03-02 18:40:11,586 - DEBUG - mean seconds/batch: 0.074116s
+2017-03-02 18:40:18,951 - DEBUG - step 12700, training accuracy 1
+2017-03-02 18:40:18,951 - DEBUG - time elapsed: 941.30s
+2017-03-02 18:40:18,951 - DEBUG - mean seconds/batch: 0.074112s
+2017-03-02 18:40:26,307 - DEBUG - step 12800, training accuracy 1
+2017-03-02 18:40:26,308 - DEBUG - time elapsed: 948.66s
+2017-03-02 18:40:26,308 - DEBUG - mean seconds/batch: 0.074108s
+2017-03-02 18:40:33,661 - DEBUG - step 12900, training accuracy 1
+2017-03-02 18:40:33,662 - DEBUG - time elapsed: 956.01s
+2017-03-02 18:40:33,662 - DEBUG - mean seconds/batch: 0.074104s
+2017-03-02 18:40:41,014 - DEBUG - step 13000, training accuracy 1
+2017-03-02 18:40:41,014 - DEBUG - time elapsed: 963.36s
+2017-03-02 18:40:41,014 - DEBUG - mean seconds/batch: 0.074099s
+2017-03-02 18:40:48,361 - DEBUG - step 13100, training accuracy 1
+2017-03-02 18:40:48,361 - DEBUG - time elapsed: 970.71s
+2017-03-02 18:40:48,361 - DEBUG - mean seconds/batch: 0.074094s
+2017-03-02 18:40:55,770 - DEBUG - step 13200, training accuracy 0.98
+2017-03-02 18:40:55,771 - DEBUG - time elapsed: 978.12s
+2017-03-02 18:40:55,771 - DEBUG - mean seconds/batch: 0.074094s
+2017-03-02 18:41:03,127 - DEBUG - step 13300, training accuracy 1
+2017-03-02 18:41:03,127 - DEBUG - time elapsed: 985.48s
+2017-03-02 18:41:03,127 - DEBUG - mean seconds/batch: 0.074090s
+2017-03-02 18:41:10,476 - DEBUG - step 13400, training accuracy 0.98
+2017-03-02 18:41:10,476 - DEBUG - time elapsed: 992.83s
+2017-03-02 18:41:10,476 - DEBUG - mean seconds/batch: 0.074086s
+2017-03-02 18:41:17,825 - DEBUG - step 13500, training accuracy 1
+2017-03-02 18:41:17,825 - DEBUG - time elapsed: 1000.17s
+2017-03-02 18:41:17,825 - DEBUG - mean seconds/batch: 0.074081s
+2017-03-02 18:41:25,188 - DEBUG - step 13600, training accuracy 1
+2017-03-02 18:41:25,188 - DEBUG - time elapsed: 1007.54s
+2017-03-02 18:41:25,188 - DEBUG - mean seconds/batch: 0.074078s
+2017-03-02 18:41:32,558 - DEBUG - step 13700, training accuracy 1
+2017-03-02 18:41:32,558 - DEBUG - time elapsed: 1014.91s
+2017-03-02 18:41:32,558 - DEBUG - mean seconds/batch: 0.074075s
+2017-03-02 18:41:39,928 - DEBUG - step 13800, training accuracy 0.98
+2017-03-02 18:41:39,929 - DEBUG - time elapsed: 1022.28s
+2017-03-02 18:41:39,929 - DEBUG - mean seconds/batch: 0.074073s
+2017-03-02 18:41:47,281 - DEBUG - step 13900, training accuracy 0.98
+2017-03-02 18:41:47,281 - DEBUG - time elapsed: 1029.63s
+2017-03-02 18:41:47,282 - DEBUG - mean seconds/batch: 0.074069s
+2017-03-02 18:41:54,639 - DEBUG - step 14000, training accuracy 1
+2017-03-02 18:41:54,639 - DEBUG - time elapsed: 1036.99s
+2017-03-02 18:41:54,639 - DEBUG - mean seconds/batch: 0.074065s
+2017-03-02 18:42:01,995 - DEBUG - step 14100, training accuracy 1
+2017-03-02 18:42:01,995 - DEBUG - time elapsed: 1044.34s
+2017-03-02 18:42:01,995 - DEBUG - mean seconds/batch: 0.074062s
+2017-03-02 18:42:09,347 - DEBUG - step 14200, training accuracy 0.98
+2017-03-02 18:42:09,347 - DEBUG - time elapsed: 1051.70s
+2017-03-02 18:42:09,347 - DEBUG - mean seconds/batch: 0.074058s
+2017-03-02 18:42:16,759 - DEBUG - step 14300, training accuracy 1
+2017-03-02 18:42:16,759 - DEBUG - time elapsed: 1059.11s
+2017-03-02 18:42:16,759 - DEBUG - mean seconds/batch: 0.074058s
+2017-03-02 18:42:24,110 - DEBUG - step 14400, training accuracy 1
+2017-03-02 18:42:24,110 - DEBUG - time elapsed: 1066.46s
+2017-03-02 18:42:24,110 - DEBUG - mean seconds/batch: 0.074055s
+2017-03-02 18:42:31,473 - DEBUG - step 14500, training accuracy 1
+2017-03-02 18:42:31,473 - DEBUG - time elapsed: 1073.82s
+2017-03-02 18:42:31,473 - DEBUG - mean seconds/batch: 0.074052s
+2017-03-02 18:42:38,830 - DEBUG - step 14600, training accuracy 1
+2017-03-02 18:42:38,830 - DEBUG - time elapsed: 1081.18s
+2017-03-02 18:42:38,830 - DEBUG - mean seconds/batch: 0.074048s
+2017-03-02 18:42:46,181 - DEBUG - step 14700, training accuracy 1
+2017-03-02 18:42:46,181 - DEBUG - time elapsed: 1088.53s
+2017-03-02 18:42:46,182 - DEBUG - mean seconds/batch: 0.074045s
+2017-03-02 18:42:53,534 - DEBUG - step 14800, training accuracy 1
+2017-03-02 18:42:53,535 - DEBUG - time elapsed: 1095.88s
+2017-03-02 18:42:53,535 - DEBUG - mean seconds/batch: 0.074041s
+2017-03-02 18:43:00,880 - DEBUG - step 14900, training accuracy 1
+2017-03-02 18:43:00,880 - DEBUG - time elapsed: 1103.23s
+2017-03-02 18:43:00,880 - DEBUG - mean seconds/batch: 0.074037s
+2017-03-02 18:43:08,248 - DEBUG - step 15000, training accuracy 1
+2017-03-02 18:43:08,248 - DEBUG - time elapsed: 1110.60s
+2017-03-02 18:43:08,248 - DEBUG - mean seconds/batch: 0.074035s
+2017-03-02 18:43:15,598 - DEBUG - step 15100, training accuracy 1
+2017-03-02 18:43:15,598 - DEBUG - time elapsed: 1117.95s
+2017-03-02 18:43:15,598 - DEBUG - mean seconds/batch: 0.074031s
+2017-03-02 18:43:22,958 - DEBUG - step 15200, training accuracy 1
+2017-03-02 18:43:22,958 - DEBUG - time elapsed: 1125.31s
+2017-03-02 18:43:22,958 - DEBUG - mean seconds/batch: 0.074029s
+2017-03-02 18:43:30,315 - DEBUG - step 15300, training accuracy 1
+2017-03-02 18:43:30,315 - DEBUG - time elapsed: 1132.66s
+2017-03-02 18:43:30,316 - DEBUG - mean seconds/batch: 0.074026s
+2017-03-02 18:43:37,742 - DEBUG - step 15400, training accuracy 1
+2017-03-02 18:43:37,742 - DEBUG - time elapsed: 1140.09s
+2017-03-02 18:43:37,742 - DEBUG - mean seconds/batch: 0.074027s
+2017-03-02 18:43:45,090 - DEBUG - step 15500, training accuracy 1
+2017-03-02 18:43:45,090 - DEBUG - time elapsed: 1147.44s
+2017-03-02 18:43:45,090 - DEBUG - mean seconds/batch: 0.074024s
+2017-03-02 18:43:52,440 - DEBUG - step 15600, training accuracy 1
+2017-03-02 18:43:52,440 - DEBUG - time elapsed: 1154.79s
+2017-03-02 18:43:52,440 - DEBUG - mean seconds/batch: 0.074020s
+2017-03-02 18:43:59,787 - DEBUG - step 15700, training accuracy 1
+2017-03-02 18:43:59,787 - DEBUG - time elapsed: 1162.14s
+2017-03-02 18:43:59,788 - DEBUG - mean seconds/batch: 0.074017s
+2017-03-02 18:44:07,134 - DEBUG - step 15800, training accuracy 1
+2017-03-02 18:44:07,134 - DEBUG - time elapsed: 1169.48s
+2017-03-02 18:44:07,134 - DEBUG - mean seconds/batch: 0.074013s
+2017-03-02 18:44:14,490 - DEBUG - step 15900, training accuracy 1
+2017-03-02 18:44:14,490 - DEBUG - time elapsed: 1176.84s
+2017-03-02 18:44:14,490 - DEBUG - mean seconds/batch: 0.074010s
+2017-03-02 18:44:21,822 - DEBUG - step 16000, training accuracy 1
+2017-03-02 18:44:21,822 - DEBUG - time elapsed: 1184.17s
+2017-03-02 18:44:21,822 - DEBUG - mean seconds/batch: 0.074006s
+2017-03-02 18:44:29,172 - DEBUG - step 16100, training accuracy 0.98
+2017-03-02 18:44:29,173 - DEBUG - time elapsed: 1191.52s
+2017-03-02 18:44:29,173 - DEBUG - mean seconds/batch: 0.074003s
+2017-03-02 18:44:36,521 - DEBUG - step 16200, training accuracy 1
+2017-03-02 18:44:36,521 - DEBUG - time elapsed: 1198.87s
+2017-03-02 18:44:36,521 - DEBUG - mean seconds/batch: 0.074000s
+2017-03-02 18:44:43,865 - DEBUG - step 16300, training accuracy 1
+2017-03-02 18:44:43,865 - DEBUG - time elapsed: 1206.21s
+2017-03-02 18:44:43,865 - DEBUG - mean seconds/batch: 0.073996s
+2017-03-02 18:44:51,218 - DEBUG - step 16400, training accuracy 1
+2017-03-02 18:44:51,218 - DEBUG - time elapsed: 1213.57s
+2017-03-02 18:44:51,218 - DEBUG - mean seconds/batch: 0.073993s
+2017-03-02 18:44:58,614 - DEBUG - step 16500, training accuracy 1
+2017-03-02 18:44:58,614 - DEBUG - time elapsed: 1220.96s
+2017-03-02 18:44:58,614 - DEBUG - mean seconds/batch: 0.073993s
+2017-03-02 18:45:05,959 - DEBUG - step 16600, training accuracy 1
+2017-03-02 18:45:05,960 - DEBUG - time elapsed: 1228.31s
+2017-03-02 18:45:05,960 - DEBUG - mean seconds/batch: 0.073990s
+2017-03-02 18:45:13,310 - DEBUG - step 16700, training accuracy 1
+2017-03-02 18:45:13,310 - DEBUG - time elapsed: 1235.66s
+2017-03-02 18:45:13,310 - DEBUG - mean seconds/batch: 0.073987s
+2017-03-02 18:45:20,662 - DEBUG - step 16800, training accuracy 1
+2017-03-02 18:45:20,662 - DEBUG - time elapsed: 1243.01s
+2017-03-02 18:45:20,662 - DEBUG - mean seconds/batch: 0.073984s
+2017-03-02 18:45:28,013 - DEBUG - step 16900, training accuracy 1
+2017-03-02 18:45:28,013 - DEBUG - time elapsed: 1250.36s
+2017-03-02 18:45:28,013 - DEBUG - mean seconds/batch: 0.073982s
+2017-03-02 18:45:35,360 - DEBUG - step 17000, training accuracy 1
+2017-03-02 18:45:35,361 - DEBUG - time elapsed: 1257.71s
+2017-03-02 18:45:35,361 - DEBUG - mean seconds/batch: 0.073979s
+2017-03-02 18:45:42,717 - DEBUG - step 17100, training accuracy 1
+2017-03-02 18:45:42,717 - DEBUG - time elapsed: 1265.07s
+2017-03-02 18:45:42,718 - DEBUG - mean seconds/batch: 0.073976s
+2017-03-02 18:45:50,067 - DEBUG - step 17200, training accuracy 1
+2017-03-02 18:45:50,068 - DEBUG - time elapsed: 1272.42s
+2017-03-02 18:45:50,068 - DEBUG - mean seconds/batch: 0.073973s
+2017-03-02 18:45:57,417 - DEBUG - step 17300, training accuracy 1
+2017-03-02 18:45:57,417 - DEBUG - time elapsed: 1279.77s
+2017-03-02 18:45:57,417 - DEBUG - mean seconds/batch: 0.073971s
+2017-03-02 18:46:04,753 - DEBUG - step 17400, training accuracy 1
+2017-03-02 18:46:04,753 - DEBUG - time elapsed: 1287.10s
+2017-03-02 18:46:04,753 - DEBUG - mean seconds/batch: 0.073967s
+2017-03-02 18:46:12,084 - DEBUG - step 17500, training accuracy 1
+2017-03-02 18:46:12,085 - DEBUG - time elapsed: 1294.43s
+2017-03-02 18:46:12,085 - DEBUG - mean seconds/batch: 0.073963s
+2017-03-02 18:46:19,479 - DEBUG - step 17600, training accuracy 1
+2017-03-02 18:46:19,479 - DEBUG - time elapsed: 1301.83s
+2017-03-02 18:46:19,479 - DEBUG - mean seconds/batch: 0.073963s
+2017-03-02 18:46:26,814 - DEBUG - step 17700, training accuracy 1
+2017-03-02 18:46:26,815 - DEBUG - time elapsed: 1309.16s
+2017-03-02 18:46:26,815 - DEBUG - mean seconds/batch: 0.073960s
+2017-03-02 18:46:34,151 - DEBUG - step 17800, training accuracy 1
+2017-03-02 18:46:34,151 - DEBUG - time elapsed: 1316.50s
+2017-03-02 18:46:34,151 - DEBUG - mean seconds/batch: 0.073957s
+2017-03-02 18:46:41,491 - DEBUG - step 17900, training accuracy 1
+2017-03-02 18:46:41,492 - DEBUG - time elapsed: 1323.84s
+2017-03-02 18:46:41,492 - DEBUG - mean seconds/batch: 0.073953s
+2017-03-02 18:46:48,838 - DEBUG - step 18000, training accuracy 1
+2017-03-02 18:46:48,838 - DEBUG - time elapsed: 1331.19s
+2017-03-02 18:46:48,838 - DEBUG - mean seconds/batch: 0.073951s
+2017-03-02 18:46:56,180 - DEBUG - step 18100, training accuracy 1
+2017-03-02 18:46:56,181 - DEBUG - time elapsed: 1338.53s
+2017-03-02 18:46:56,181 - DEBUG - mean seconds/batch: 0.073948s
+2017-03-02 18:47:03,538 - DEBUG - step 18200, training accuracy 1
+2017-03-02 18:47:03,538 - DEBUG - time elapsed: 1345.89s
+2017-03-02 18:47:03,539 - DEBUG - mean seconds/batch: 0.073946s
+2017-03-02 18:47:10,878 - DEBUG - step 18300, training accuracy 1
+2017-03-02 18:47:10,878 - DEBUG - time elapsed: 1353.23s
+2017-03-02 18:47:10,879 - DEBUG - mean seconds/batch: 0.073943s
+2017-03-02 18:47:18,223 - DEBUG - step 18400, training accuracy 1
+2017-03-02 18:47:18,223 - DEBUG - time elapsed: 1360.57s
+2017-03-02 18:47:18,223 - DEBUG - mean seconds/batch: 0.073940s
+2017-03-02 18:47:25,580 - DEBUG - step 18500, training accuracy 1
+2017-03-02 18:47:25,580 - DEBUG - time elapsed: 1367.93s
+2017-03-02 18:47:25,580 - DEBUG - mean seconds/batch: 0.073938s
+2017-03-02 18:47:32,919 - DEBUG - step 18600, training accuracy 1
+2017-03-02 18:47:32,920 - DEBUG - time elapsed: 1375.27s
+2017-03-02 18:47:32,920 - DEBUG - mean seconds/batch: 0.073935s
+2017-03-02 18:47:40,309 - DEBUG - step 18700, training accuracy 1
+2017-03-02 18:47:40,309 - DEBUG - time elapsed: 1382.66s
+2017-03-02 18:47:40,309 - DEBUG - mean seconds/batch: 0.073935s
+2017-03-02 18:47:47,659 - DEBUG - step 18800, training accuracy 1
+2017-03-02 18:47:47,659 - DEBUG - time elapsed: 1390.01s
+2017-03-02 18:47:47,659 - DEBUG - mean seconds/batch: 0.073933s
+2017-03-02 18:47:55,012 - DEBUG - step 18900, training accuracy 1
+2017-03-02 18:47:55,012 - DEBUG - time elapsed: 1397.36s
+2017-03-02 18:47:55,013 - DEBUG - mean seconds/batch: 0.073931s
+2017-03-02 18:48:02,358 - DEBUG - step 19000, training accuracy 1
+2017-03-02 18:48:02,358 - DEBUG - time elapsed: 1404.71s
+2017-03-02 18:48:02,358 - DEBUG - mean seconds/batch: 0.073928s
+2017-03-02 18:48:09,707 - DEBUG - step 19100, training accuracy 1
+2017-03-02 18:48:09,707 - DEBUG - time elapsed: 1412.06s
+2017-03-02 18:48:09,707 - DEBUG - mean seconds/batch: 0.073926s
+2017-03-02 18:48:17,065 - DEBUG - step 19200, training accuracy 1
+2017-03-02 18:48:17,065 - DEBUG - time elapsed: 1419.41s
+2017-03-02 18:48:17,065 - DEBUG - mean seconds/batch: 0.073924s
+2017-03-02 18:48:24,407 - DEBUG - step 19300, training accuracy 1
+2017-03-02 18:48:24,407 - DEBUG - time elapsed: 1426.76s
+2017-03-02 18:48:24,407 - DEBUG - mean seconds/batch: 0.073921s
+2017-03-02 18:48:31,757 - DEBUG - step 19400, training accuracy 0.98
+2017-03-02 18:48:31,757 - DEBUG - time elapsed: 1434.11s
+2017-03-02 18:48:31,757 - DEBUG - mean seconds/batch: 0.073919s
+2017-03-02 18:48:39,107 - DEBUG - step 19500, training accuracy 1
+2017-03-02 18:48:39,107 - DEBUG - time elapsed: 1441.46s
+2017-03-02 18:48:39,107 - DEBUG - mean seconds/batch: 0.073917s
+2017-03-02 18:48:46,460 - DEBUG - step 19600, training accuracy 1
+2017-03-02 18:48:46,460 - DEBUG - time elapsed: 1448.81s
+2017-03-02 18:48:46,460 - DEBUG - mean seconds/batch: 0.073915s
+2017-03-02 18:48:53,802 - DEBUG - step 19700, training accuracy 1
+2017-03-02 18:48:53,802 - DEBUG - time elapsed: 1456.15s
+2017-03-02 18:48:53,802 - DEBUG - mean seconds/batch: 0.073913s
+2017-03-02 18:49:01,196 - DEBUG - step 19800, training accuracy 1
+2017-03-02 18:49:01,196 - DEBUG - time elapsed: 1463.55s
+2017-03-02 18:49:01,196 - DEBUG - mean seconds/batch: 0.073913s
+2017-03-02 18:49:08,537 - DEBUG - step 19900, training accuracy 1
+2017-03-02 18:49:08,538 - DEBUG - time elapsed: 1470.89s
+2017-03-02 18:49:08,538 - DEBUG - mean seconds/batch: 0.073910s
+2017-03-02 18:49:20,173 - DEBUG - test accuracy 0.9916
+2017-03-02 18:49:20,173 - DEBUG - computation time: 1478.20s
