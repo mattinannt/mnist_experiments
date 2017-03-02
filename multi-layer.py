@@ -25,9 +25,7 @@ ch.setFormatter(formatter)
 # add ch to logger
 logger.addHandler(ch)
 
-
 logger.debug('STARTING MULTI-LAYER MNIST')
-
 
 # Load MNIST dataset
 from tensorflow.examples.tutorials.mnist import input_data
