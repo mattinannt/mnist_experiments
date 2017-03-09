@@ -3,9 +3,15 @@ solving mnist classification problem using tensorflow
 multi-layer architecture
 """
 
+
 # Config
 BATCH_SIZE = 50
-ITERATIONS = 20000
+ITERATIONS = 1000
+PATH_TO_MODELS = './models'
+
+import os
+if not os.path.exists(PATH_TO_MODELS):
+    os.mkdir(PATH_TO_MODELS)
 
 # Setup Logging
 import logging
@@ -33,7 +39,7 @@ mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 
 # Import TensorFlow and start interactive Session
 import tensorflow as tf
-session = tf.InteractiveSession()
+# session = tf.InteractiveSession()
 
 # Create tf placeholders for input data and predictions
 # x will be a 2d tensor with all images of the current batch * flattened pixel
@@ -93,6 +99,8 @@ b_fc2 = bias_variable([10])
 
 y_conv = tf.matmul(h_fc1_drop, W_fc2) + b_fc2
 
+y_predicted = tf.argmax(y_conv, 1)
+
 # train & evaluate model
 cross_entropy = tf.reduce_mean(
     tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y_conv))
@@ -105,27 +113,35 @@ import time
 start = time.time()
 
 # initial logging
-logger.debug('starting computation (batch-size: %d, iterations=%d)'%(BATCH_SIZE, ITERATIONS))
+logger.debug('starting computation (batch-size: %d, iterations=%d)' % (BATCH_SIZE, ITERATIONS))
 
-session.run(tf.global_variables_initializer())
+saver = tf.train.Saver()
+with tf.Session() as sess:
 
-for i in range(ITERATIONS):
-  batch = mnist.train.next_batch(BATCH_SIZE)
-  if i%100 == 0:
-    train_accuracy = accuracy.eval(feed_dict={
-        x:batch[0], y_: batch[1], keep_prob: 1.0})
-    logging.debug("step %d, training accuracy %g"%(i, train_accuracy))
+    sess.run(tf.global_variables_initializer())
 
-    time_elapsed = time.time() - start
-    logger.debug('time elapsed: %.2fs'%(time_elapsed))
-    logger.debug('mean seconds/batch: %fs'%(time_elapsed/(i+1)))
-  train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
+    for i in range(ITERATIONS):
+        batch = mnist.train.next_batch(BATCH_SIZE)
+        sess.run(train_step, feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
+
+        if i % 100 == 0:
+            train_accuracy = sess.run(accuracy, feed_dict={
+                x: batch[0], y_: batch[1], keep_prob: 1.0})
+            logging.debug("step %d, training accuracy %g" % (i, train_accuracy))
+
+            time_elapsed = time.time() - start
+            logger.debug('time elapsed: %.2fs' % (time_elapsed))
+            logger.debug('mean seconds/batch: %fs' % (time_elapsed/(i+1)))
+
+            # save model
+            saver.save(sess, PATH_TO_MODELS+'/model.ckpt', i)
+
 
 # stop time measurement
 end = time.time()
 computation_time = end - start
 
 # print accuracy of test data & computation time
-logger.debug("test accuracy %g"%accuracy.eval(feed_dict={
+logger.debug("test accuracy %g" % sess.run(accuracy, feed_dict={
     x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
-logger.debug('computation time: %.2fs'%(computation_time))
+logger.debug('computation time: %.2fs' % (computation_time))
