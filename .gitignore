@@ -93,3 +93,6 @@ ENV/
 
 # Datasets
 MNIST_data
+
+# exclude models
+mnist/models/
