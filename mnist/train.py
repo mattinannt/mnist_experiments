@@ -3,14 +3,15 @@ solving mnist classification problem using tensorflow
 multi-layer architecture
 """
 
-import model_builder
+from mnist import model_builder
 import time
+
 
 def run():
     # Config
     BATCH_SIZE = 50
     ITERATIONS = 2000
-    PATH_TO_MODELS = './models'
+    PATH_TO_MODELS = './mnist/models'
 
     import os
     if not os.path.exists(PATH_TO_MODELS):
@@ -20,7 +21,7 @@ def run():
     import logging
     logging_format = '%(asctime)s - %(levelname)s - %(message)s'
     log_level = logging.DEBUG
-    logging.basicConfig(filename='logfile.log',format=logging_format,level=log_level)
+    logging.basicConfig(filename='logfile.log', format=logging_format, level=log_level)
     # create logger
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
@@ -66,7 +67,7 @@ def run():
     # initial logging
     logger.debug('starting computation (batch-size: %d, iterations=%d)' % (BATCH_SIZE, ITERATIONS))
 
-    saver = tf.train.Saver()
+    saver = tf.train.Saver(max_to_keep=1)
     with tf.Session() as sess:
 
         model_save_name = time.strftime('date_%d-%m-%Y_time_%H-%M-%S')
@@ -86,14 +87,13 @@ def run():
                 logger.debug('mean seconds/batch: %fs' % (time_elapsed/(i+1)))
 
                 # save model
-                saver.save(sess, PATH_TO_MODELS+'/model_'+model_save_name+'.ckpt')
+                saver.save(sess, PATH_TO_MODELS+'/model_'+model_save_name+'.ckpt', i)
 
+        # stop time measurement
+        end = time.time()
+        computation_time = end - start
 
-    # stop time measurement
-    end = time.time()
-    computation_time = end - start
-
-    # print accuracy of test data & computation time
-    logger.debug("test accuracy %g" % sess.run(accuracy, feed_dict={
-        x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
-    logger.debug('computation time: %.2fs' % (computation_time))
+        # print accuracy of test data & computation time
+        logger.debug("test accuracy %g" % sess.run(accuracy, feed_dict={
+            x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
+        logger.debug('computation time: %.2fs' % (computation_time))

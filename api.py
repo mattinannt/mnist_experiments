@@ -1,15 +1,21 @@
 from flask import Flask, jsonify, request
 import numpy as np
 from mnist import evaluate
+import urllib.request
 
 # new flask app
 app = Flask(__name__)
 
+
 @app.route("/api/mnist", methods=["POST"])
 def mnist():
-    input = ((255 - np.array(request.json, dtype=np.uint8)) / 255.0).reshape(1, 784)
-    output = evaluate.run(input)
-    return jsonify(prediction=output)
+    input = request.json
+    image_url = input['imageUrl']
+    destination = '/tmp/image.png'
+    urllib.request.urlretrieve(image_url, destination)
+    prediction = evaluate.from_local_image(destination)
+    return jsonify(prediction=str(prediction))
+
 
 if __name__ == "__main__":
     app.run()

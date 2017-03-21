@@ -1,13 +1,13 @@
 '''
-restores trained model multi-layer from latest checkpoint file in path_to_trained_models
-
-
+restores trained model multi-layer from latest checkpoint file in
+path_to_trained_models
 '''
 
 import tensorflow as tf
 import cv2
 import numpy as np
-import model_builder
+from mnist import model_builder
+
 
 def from_local_image(image_path):
     PATH_TO_IMAGE = image_path
@@ -20,8 +20,9 @@ def from_local_image(image_path):
 
     return run(image_values)
 
+
 def run(image_values):
-    PATH_TO_MODELS = './mnist/models'
+    PATH_TO_MODELS = './mnist/models/'
 
     # build model
     x = tf.placeholder(tf.float32, shape=[None, 784])
@@ -35,6 +36,7 @@ def run(image_values):
         checkpoint_latest = tf.train.latest_checkpoint(PATH_TO_MODELS)
 
         print('restoring model ' + checkpoint_latest)
+
         saver.restore(sess, checkpoint_latest)
 
         prediction_idx = sess.run(tf.argmax(y_conv, 1), feed_dict={x: image_values, keep_prob: 1.0})
