@@ -12,10 +12,9 @@ import model_builder
 def from_local_image(image_path):
     PATH_TO_IMAGE = image_path
 
-
     # resize image and flatten
-    img = cv2.imread(PATH_TO_IMAGE, 0)  # load as grayscale
-    img = (img-255)/255.0  # scale to [0,1]
+    img = cv2.imread(PATH_TO_IMAGE, 0).astype(int)  # load as grayscale
+    img = (255-img)/255.0  # scale to [0,1] and invert
     img_resize = cv2.resize(img, (28, 28))
     image_values = img_resize.reshape([1, -1])
 
@@ -35,7 +34,7 @@ def run(image_values):
 
         checkpoint_latest = tf.train.latest_checkpoint(PATH_TO_MODELS)
 
-        print('restoring model '+ checkpoint_latest)
+        print('restoring model ' + checkpoint_latest)
         saver.restore(sess, checkpoint_latest)
 
         prediction_idx = sess.run(tf.argmax(y_conv, 1), feed_dict={x: image_values, keep_prob: 1.0})
