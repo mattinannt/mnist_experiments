@@ -13,8 +13,8 @@ def mnist():
     image_url = input['imageUrl']
     destination = '/tmp/image.png'
     urllib.request.urlretrieve(image_url, destination)
-    prediction = evaluate.from_local_image(destination)
-    return jsonify(prediction=str(prediction))
+    prediction, confidence = evaluate.from_local_image(destination)
+    return jsonify(prediction=str(prediction), confidence=str(confidence))
 
 
 if __name__ == "__main__":

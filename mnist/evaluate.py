@@ -39,6 +39,8 @@ def run(image_values):
 
         saver.restore(sess, checkpoint_latest)
 
-        prediction_idx = sess.run(tf.argmax(y_conv, 1), feed_dict={x: image_values, keep_prob: 1.0})
+        prediction_idx, confidence = sess.run(
+            [tf.argmax(y_conv, 1), tf.nn.softmax(y_conv)],
+            feed_dict={x: image_values, keep_prob: 1.0})
 
-        return prediction_idx[0]
+        return prediction_idx[0], confidence[0][prediction_idx[0]]
