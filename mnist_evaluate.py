@@ -2,5 +2,5 @@ from __future__ import print_function
 from mnist import evaluate
 import sys
 
-prediction = evaluate.run(sys.argv[1])
+prediction = evaluate.from_local_image(sys.argv[1])
 print("prediction:", prediction)
