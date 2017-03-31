@@ -44,16 +44,19 @@ def from_local_image(image_path, model):
     ret, thresh = cv2.threshold(img, 50, 255, 0)
     im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-
     rects = [cv2.boundingRect(ctr) for ctr in contours]
 
+    # sort bounding boxes from left to right
+    rects_sorted = sorted(rects, key=lambda x: x[0])
+
     image_values = []
-    for rect in rects:
+    for rect in rects_sorted:
         # slice image
         # TODO: slice in the order of rect[0] to ensure that prediction have same order as in image
         roi = thresh[rect[1]:rect[1]+rect[3], rect[0]:rect[0]+rect[2]]
         roi = cv2.resize(roi, (28, 28), interpolation=cv2.INTER_AREA)
         roi = cv2.dilate(roi, (3, 3))
+        roi = roi/255.0  # scale to [0, 1]
         image_values.append(roi.reshape(-1))
 
     return run(np.vstack(image_values), model)
@@ -70,4 +73,4 @@ def run(image_values, model):
         [tf.argmax(y_conv, 1), tf.nn.softmax(y_conv)],
         feed_dict={x: image_values, keep_prob: 1.0})
 
-    return prediction_idx, [confidence[tuple] for tuple in zip(range(prediction_idx.shape[0]), prediction_idx)]
+    return prediction_idx, np.array([confidence[tuple] for tuple in zip(range(prediction_idx.shape[0]), prediction_idx)])
