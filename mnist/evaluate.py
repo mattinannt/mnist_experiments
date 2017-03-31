@@ -7,6 +7,7 @@ import tensorflow as tf
 import cv2
 import numpy as np
 from mnist import model_builder
+import pdb
 
 
 def init():
@@ -34,13 +35,28 @@ def from_local_image(image_path, model):
 
     PATH_TO_IMAGE = image_path
 
-    # resize image and flatten
-    img = cv2.imread(PATH_TO_IMAGE, 0).astype(int)  # load as grayscale
-    img = (255-img)/255.0  # scale to [0,1] and invert
-    img_resize = cv2.resize(img, (28, 28))
-    image_values = img_resize.reshape([1, -1])
+    # load image as grayscale, blur, and invert
+    img = cv2.imread(PATH_TO_IMAGE, 0)
+    img = cv2.GaussianBlur(img, (5, 5), 0)
+    img = cv2.bitwise_not(img)  # invert
 
-    return run(image_values, model)
+    # threshold image and find contours
+    ret, thresh = cv2.threshold(img, 50, 255, 0)
+    im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+
+    rects = [cv2.boundingRect(ctr) for ctr in contours]
+
+    image_values = []
+    for rect in rects:
+        # slice image
+        # TODO: slice in the order of rect[0] to ensure that prediction have same order as in image
+        roi = thresh[rect[1]:rect[1]+rect[3], rect[0]:rect[0]+rect[2]]
+        roi = cv2.resize(roi, (28, 28), interpolation=cv2.INTER_AREA)
+        roi = cv2.dilate(roi, (3, 3))
+        image_values.append(roi.reshape(-1))
+
+    return run(np.vstack(image_values), model)
 
 
 def run(image_values, model):
@@ -54,4 +70,4 @@ def run(image_values, model):
         [tf.argmax(y_conv, 1), tf.nn.softmax(y_conv)],
         feed_dict={x: image_values, keep_prob: 1.0})
 
-    return prediction_idx[0], confidence[0][prediction_idx[0]]
+    return prediction_idx, [confidence[tuple] for tuple in zip(range(prediction_idx.shape[0]), prediction_idx)]
