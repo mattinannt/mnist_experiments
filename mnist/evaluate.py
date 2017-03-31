@@ -40,8 +40,17 @@ def from_local_image(image_path, model):
     img = cv2.GaussianBlur(img, (5, 5), 0)
     img = cv2.bitwise_not(img)  # invert
 
+    height = img.shape[0]
+    width = img.shape[1]
+
+    max_dim = 300
+    height_ar = int(float(height)/np.maximum(height, width) * max_dim)
+    width_ar = int(float(width)/np.maximum(height, width) * max_dim)
+
+    img = cv2.resize(img, (width_ar, height_ar), interpolation=cv2.INTER_AREA)
+
     # threshold image and find contours
-    ret, thresh = cv2.threshold(img, 50, 255, 0)
+    ret, thresh = cv2.threshold(img, 100, 255, 0)
     im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     rects = [cv2.boundingRect(ctr) for ctr in contours]
