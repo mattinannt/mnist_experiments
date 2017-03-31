@@ -52,11 +52,27 @@ def from_local_image(image_path, model):
     image_values = []
     for rect in rects_sorted:
         # slice image
-        # TODO: slice in the order of rect[0] to ensure that prediction have same order as in image
         roi = thresh[rect[1]:rect[1]+rect[3], rect[0]:rect[0]+rect[2]]
-        roi = cv2.resize(roi, (28, 28), interpolation=cv2.INTER_AREA)
-        roi = cv2.dilate(roi, (3, 3))
+        height = roi.shape[0]
+        width = roi.shape[1]
+
+        height_ar = int(float(height)/np.maximum(height, width) * 24.0)
+        width_ar = int(float(width)/np.maximum(height, width) * 24.0)
+
+        roi = cv2.resize(roi, (width_ar, height_ar), interpolation=cv2.INTER_AREA)
+
+        height_add_l = int(np.floor((28 - height_ar) / 2))
+        width_add_b = int(np.floor((28 - width_ar) / 2))
+
+        roi_padded = np.zeros([28, 28])
+
+        for r in range(roi.shape[0]):
+            for c in range(roi.shape[1]):
+                roi_padded[r + height_add_l, c + width_add_b] = roi[r, c]
+
+        roi = cv2.dilate(roi_padded, (3, 3))
         roi = roi/255.0  # scale to [0, 1]
+        roi = roi > 0.2
         image_values.append(roi.reshape(-1))
 
     return run(np.vstack(image_values), model)
